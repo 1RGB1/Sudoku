@@ -8,18 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController
+{
+    var gameLeve = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func GameLevelPressed(_ sender: UIButton) {
+        self.gameLeve = sender.tag;
+        self.performSegue(withIdentifier: "startGameSegue", sender: self);
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let SBVC = segue.destination as! SudokuBoardViewController
+        SBVC.gameLevel = self.gameLeve
+        SBVC.generateGame()
+    }
 }
 
