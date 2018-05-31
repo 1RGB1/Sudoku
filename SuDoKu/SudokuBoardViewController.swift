@@ -20,6 +20,7 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
     var solve = Array<Array<Int>>()
     var toucedLabel = 0
     var originalColor : UIColor!
+    var madeAppSolvePuzzle : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,6 +128,11 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
                 return
             }
             
+            if madeAppSolvePuzzle {
+                showMessage("Sorry", message: "Try to solve it by yourself next time", ActionTitle: "Ok", withComplitionCode: true)
+                return
+            }
+            
             let worngTiles = self.game.checkSln(self.puzzle)
             
             if worngTiles.count == 0 {
@@ -165,6 +171,8 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
     //For Solving grid
     //-----------------
     @IBAction func solvePressed(_ sender: AnyObject) {
+        madeAppSolvePuzzle = true
+        
         if self.gameLevel == 0 {
             if self.puzzle.count == 0 {
                 self.puzzle = Array(repeating: Array<Int>(repeating: 0, count: 9), count: 9)
