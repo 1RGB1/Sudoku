@@ -168,6 +168,12 @@
                         <viewLayoutGuide key="safeArea" id="gUK-Ya-5RL"/>
                     </view>
                     <connections>
+                        <outletCollection property="gameLevelsButtonsCollection" destination="akB-DJ-ant" collectionClass="NSMutableArray" id="ZAS-6Q-qVe"/>
+                        <outletCollection property="gameLevelsButtonsCollection" destination="bxn-uM-fKM" collectionClass="NSMutableArray" id="MDp-k0-das"/>
+                        <outletCollection property="gameLevelsButtonsCollection" destination="txJ-4j-Pll" collectionClass="NSMutableArray" id="st7-zQ-Fp6"/>
+                        <outletCollection property="gameLevelsButtonsCollection" destination="Xpz-4h-G35" collectionClass="NSMutableArray" id="9Ld-l1-kqD"/>
+                        <outletCollection property="gameLevelsButtonsCollection" destination="vgY-Lf-SaZ" collectionClass="NSMutableArray" id="jOY-bp-6fV"/>
+                        <outletCollection property="gameLevelsButtonsCollection" destination="uQL-a2-klj" collectionClass="NSMutableArray" id="t9Q-p5-69Z"/>
                         <segue destination="2Sh-Gg-1TI" kind="presentation" identifier="startGameSegue" id="GTw-Lj-BKL"/>
                     </connections>
                 </viewController>
@@ -206,7 +212,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-Bv-usr" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
-                                                        <rect key="frame" x="288" y="0.0" width="54" height="41"/>
+                                                        <rect key="frame" x="278" y="0.0" width="54" height="41"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                         <state key="normal" title="Check">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,7 +242,7 @@
                                                 <constraints>
                                                     <constraint firstItem="lNh-Bv-usr" firstAttribute="centerY" secondItem="CZz-nI-gV6" secondAttribute="centerY" id="0Oj-VH-nys"/>
                                                     <constraint firstAttribute="trailing" secondItem="hQj-FD-Qsz" secondAttribute="trailing" id="8eH-x4-NZp"/>
-                                                    <constraint firstItem="hQj-FD-Qsz" firstAttribute="leading" secondItem="lNh-Bv-usr" secondAttribute="trailing" constant="5" id="AXG-sP-5eO"/>
+                                                    <constraint firstItem="hQj-FD-Qsz" firstAttribute="leading" secondItem="lNh-Bv-usr" secondAttribute="trailing" constant="15" id="AXG-sP-5eO"/>
                                                     <constraint firstItem="hQj-FD-Qsz" firstAttribute="centerY" secondItem="CZz-nI-gV6" secondAttribute="centerY" id="ZPO-pZ-nsP"/>
                                                     <constraint firstItem="uKI-Ws-XGa" firstAttribute="centerY" secondItem="CZz-nI-gV6" secondAttribute="centerY" id="csa-G3-XqF"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uKI-Ws-XGa" secondAttribute="trailing" constant="20" symbolic="YES" id="frY-we-sup"/>
@@ -1410,6 +1416,7 @@
                     </view>
                     <connections>
                         <outlet property="banner" destination="JNW-9Z-73F" id="K9I-xu-8aD"/>
+                        <outlet property="checkButton" destination="lNh-Bv-usr" id="mlW-GI-Sna"/>
                         <outletCollection property="tilesLabelCollection" destination="dXA-kp-wDh" collectionClass="NSMutableArray" id="Wkh-mN-KGI"/>
                         <outletCollection property="tilesLabelCollection" destination="m3N-qF-WgV" collectionClass="NSMutableArray" id="quB-l5-BkV"/>
                         <outletCollection property="tilesLabelCollection" destination="xjN-Of-WAk" collectionClass="NSMutableArray" id="zMy-of-kEM"/>

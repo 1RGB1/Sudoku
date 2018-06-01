@@ -13,6 +13,7 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
 {
     @IBOutlet var tilesLabelCollection: [UILabel]!
     @IBOutlet var banner: UIView!
+    @IBOutlet weak var checkButton: CustomizedButton!
     
     let game = Game()
     var gameLevel = 0
@@ -24,6 +25,16 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.gameLevel == 0 {
+            checkButton.isHidden = true
+        } else {
+            checkButton.isHidden = false
+        }
+        
+        for label in tilesLabelCollection {
+            label.isUserInteractionEnabled = true
+        }
         
         self.originalColor = self.tilesLabelCollection[0].backgroundColor;
         prepGrid()

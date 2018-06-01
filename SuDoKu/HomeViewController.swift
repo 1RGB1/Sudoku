@@ -10,6 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController
 {
+    
+    @IBOutlet var gameLevelsButtonsCollection: [CustomizedButton]!
+    
     var gameLeve = 0;
     
     override func viewDidLoad() {
@@ -26,6 +29,13 @@ class HomeViewController: UIViewController
             LanguageHandler.sharedInstance.setDirection(.RTL, andLanguage: .ARABIC)
         } else {
             LanguageHandler.sharedInstance.setDirection(.LTR, andLanguage: .ENGLISH)
+        }
+        self.updateUI()
+    }
+    
+    func updateUI() {
+        for button in gameLevelsButtonsCollection {
+            button.setTitle(LanguageHandler.sharedInstance.stringForKey(key: button.txt), for: .normal)
         }
     }
     
