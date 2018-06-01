@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuDoKu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SuDoKu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,71 +24,100 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Log-Hq-fAn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q06-7q-d0v">
+                                                <rect key="frame" x="344" y="20" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="k3C-qC-Uwb"/>
+                                                    <constraint firstAttribute="height" constant="50" id="mOB-Qq-pp9"/>
+                                                </constraints>
+                                                <state key="normal" image="Lang_Black"/>
+                                                <connections>
+                                                    <action selector="changeLangPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMD-Vl-D3l"/>
+                                                </connections>
+                                            </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sudokua" translatesAutoresizingMaskIntoConstraints="NO" id="6yb-Vt-aGV">
-                                                <rect key="frame" x="20" y="20" width="374" height="330"/>
+                                                <rect key="frame" x="20" y="70" width="374" height="330"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="330" id="oKF-sq-ufU"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-OH-EWB">
-                                                <rect key="frame" x="147" y="360" width="120" height="288"/>
+                                                <rect key="frame" x="147" y="410" width="120" height="288"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akB-DJ-ant">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akB-DJ-ant" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="48"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Very Easy">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Very Easy"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="GameLevelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOL-bv-Hdc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-uM-fKM">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-uM-fKM" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="48" width="120" height="48"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Easy">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Easy"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="GameLevelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTz-O4-3Ei"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txJ-4j-Pll">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txJ-4j-Pll" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="96" width="120" height="48"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Medium">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Medium"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="GameLevelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VL-gN-w6v"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-4h-G35">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-4h-G35" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="144" width="120" height="48"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Hard">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Hard"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="GameLevelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iti-Xe-zuJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgY-Lf-SaZ">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgY-Lf-SaZ" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="192" width="120" height="48"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Extreme">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Extreme"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="GameLevelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPP-H1-iyh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQL-a2-klj">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQL-a2-klj" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="240" width="120" height="48"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Empty">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Empty"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="GameLevelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Nr-Af-TTn"/>
                                                         </connections>
@@ -107,13 +136,16 @@
                                         <color key="backgroundColor" red="0.46666666666666667" green="0.72156862745098038" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="8Ji-OH-EWB" firstAttribute="top" secondItem="6yb-Vt-aGV" secondAttribute="bottom" constant="10" id="4XN-Sb-GhD"/>
+                                            <constraint firstItem="q06-7q-d0v" firstAttribute="top" secondItem="9f2-xK-ZQw" secondAttribute="top" constant="20" id="79s-es-b7c"/>
                                             <constraint firstItem="6yb-Vt-aGV" firstAttribute="leading" secondItem="Log-Hq-fAn" secondAttribute="leading" constant="20" id="IqO-ml-a6c"/>
-                                            <constraint firstItem="6yb-Vt-aGV" firstAttribute="top" secondItem="Log-Hq-fAn" secondAttribute="top" constant="20" id="Jxf-CD-IP4"/>
+                                            <constraint firstItem="6yb-Vt-aGV" firstAttribute="top" secondItem="q06-7q-d0v" secondAttribute="bottom" id="Jxf-CD-IP4"/>
                                             <constraint firstItem="8Ji-OH-EWB" firstAttribute="centerX" secondItem="Log-Hq-fAn" secondAttribute="centerX" id="PAf-3Y-OqW"/>
                                             <constraint firstAttribute="height" constant="800" id="bFt-tF-qcS"/>
                                             <constraint firstAttribute="trailing" secondItem="6yb-Vt-aGV" secondAttribute="trailing" constant="20" id="ecZ-pa-SDw"/>
+                                            <constraint firstAttribute="trailing" secondItem="q06-7q-d0v" secondAttribute="trailing" constant="20" id="vIH-2U-oIA"/>
                                             <constraint firstItem="6yb-Vt-aGV" firstAttribute="centerX" secondItem="Log-Hq-fAn" secondAttribute="centerX" id="wzE-fe-qap"/>
                                         </constraints>
+                                        <viewLayoutGuide key="safeArea" id="9f2-xK-ZQw"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -160,32 +192,41 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZz-nI-gV6" userLabel="Nav Bar">
                                                 <rect key="frame" x="10" y="30" width="394" height="40"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKI-Ws-XGa">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKI-Ws-XGa" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="41"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                         <state key="normal" title="New">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="New"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="cancelPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="YMp-RG-1zf"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-Bv-usr">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-Bv-usr" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="288" y="0.0" width="54" height="41"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                         <state key="normal" title="Check">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Check"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="checkSolutionPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="jgq-an-jKF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-FD-Qsz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-FD-Qsz" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                         <rect key="frame" x="347" y="0.0" width="47" height="41"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                         <state key="normal" title="Solve">
                                                             <color key="titleColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="txt" value="Solve"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="solvePressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="G5n-fS-2DJ"/>
                                                         </connections>
@@ -1191,101 +1232,128 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GuC-W7-alT">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZR-00-4gG">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZR-00-4gG" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="1">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="1"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="OPv-0t-b2H"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv2-6f-acj">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv2-6f-acj" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="34.666666666666657" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="2">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="2"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="hNC-8C-GYl"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-Na-7Wr">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-Na-7Wr" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="79.666666666666671" y="0.0" width="35" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="3">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="3"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="miE-2r-XQG"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpB-cr-tEf">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpB-cr-tEf" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="119.66666666666666" y="0.0" width="35" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="4">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="4"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="uVo-Dl-I9a"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o22-rn-3Si">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o22-rn-3Si" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="159.66666666666666" y="0.0" width="34.666666666666657" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="5">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="5"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="gyL-L5-TNg"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHt-ko-qr3">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHt-ko-qr3" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="199.33333333333334" y="0.0" width="35" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="6">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="6"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="qlE-QP-YgO"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHz-r2-Fqu">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHz-r2-Fqu" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="239.33333333333331" y="0.0" width="35" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="7">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="7"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="K4j-Sl-pGm"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQd-d9-nrD">
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQd-d9-nrD" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="279.33333333333331" y="0.0" width="34.666666666666686" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="8">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="8"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="dRU-gQ-537"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa0-0a-vfY">
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa0-0a-vfY" customClass="CustomizedButton" customModule="SuDoKu" customModuleProvider="target">
                                                                 <rect key="frame" x="319" y="0.0" width="35" height="50"/>
                                                                 <color key="backgroundColor" red="0.41500091550000001" green="0.10480233279999999" blue="0.60521906609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                                 <state key="normal" title="9">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="txt" value="9"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="numberPressed:" destination="2Sh-Gg-1TI" eventType="touchUpInside" id="o8T-GO-nAu"/>
                                                                 </connections>
@@ -1431,6 +1499,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Lang_Black" width="48" height="48"/>
         <image name="sudokua" width="560" height="420"/>
     </resources>
 </document>

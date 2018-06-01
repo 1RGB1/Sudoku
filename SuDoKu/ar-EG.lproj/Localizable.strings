@@ -1,0 +1,45 @@
+ /* 
+  Localizable.strings
+  SuDoKu
+
+  Created by Ahmad Ragab on 6/1/18.
+  Copyright © 2018 Ahmad Ragab. All rights reserved.
+*/
+
+"1" = "١";
+"2" = "٢";
+"3" = "٣";
+"4" = "٤";
+"5" = "٥";
+"6" = "٦";
+"7" = "٧";
+"8" = "٨";
+"9" = "٩";
+"10" = "١٠";
+
+"Very Easy" = "سهل جدا";
+"Easy" = "سهل";
+"Medium" = "متوسط";
+"Hard" = "صعب";
+"Extreme" = "صعب جدا";
+"Empty" = "فارغ";
+
+"New" = "لعبه جديده";
+"Check" = "إفحص";
+"Solve" = "حل";
+
+"Language" = "English";
+
+"Ok" = "تم";
+"Error" = "خطأ";
+"Sorry" = "عذرا";
+"Yay!!!" = "عاش 💪";
+"Wrong answer" = "إجابة خاطئه";
+
+"Check your tiles again because this grid has no solution" = "تأكد أنك أدخلت أرقام بشكل صحيح في جميع الخانات لأنه لايوجد حل";
+"You can't change this tile" = "لا تستطيع تغير الرقم في هذه الخانه";
+"Please choose tile first" = "برجاء قم بإختيار خانه أولا";
+"Still have empty places, fill them first" = "برجاء أكمل جميع الخانات";
+"Try to solve it by yourself next time" = "حاول حلها بنفسك في المره القادمة";
+"Congrats... You solved it with score: " = "مبروك... لقد قمت بحل اللعبه بمجموع نقاط: ";
+"Great work, but check your answer again" = "عمل جيد ، ولكن برجاء التأكد من حلك ثانية";

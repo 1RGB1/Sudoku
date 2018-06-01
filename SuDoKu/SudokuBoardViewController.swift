@@ -43,7 +43,7 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
             for i in 0 ..< 9 {
                 for j in 0 ..< 9 {
                     if self.puzzle[i][j] != 0 {
-                        self.tilesLabelCollection[labelIdx].text = "\(self.puzzle[i][j])"
+                        self.tilesLabelCollection[labelIdx].text = LanguageHandler.sharedInstance.stringForKey(key: "\(self.puzzle[i][j])")//"\(self.puzzle[i][j])"
                     }
                     labelIdx += 1
                 }
@@ -66,22 +66,6 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
         setTileColor(UIColor.green)
     }
     
-    func showMessage(_ title: String, message: String, ActionTitle: String, withComplitionCode: Bool) {
-        let messageC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction : UIAlertAction!
-        
-        if withComplitionCode {
-            okAction = UIAlertAction(title: ActionTitle, style: .default, handler: { (okAction) -> Void in
-                super.dismiss(animated: true, completion: nil);
-            })
-        } else {
-            okAction = UIAlertAction(title: ActionTitle, style: .default, handler: nil)
-        }
-        
-        messageC.addAction(okAction)
-        self.present(messageC, animated: true, completion: nil)
-    }
-    
     func fillPuzzleLocation(_ location: Int, number: Int) {
         if self.toucedLabel > 0 {
             if self.puzzle.count == 0 {
@@ -101,15 +85,15 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
         if self.toucedLabel > 0 {
             let tile = self.tilesLabelCollection[self.toucedLabel - 1]
             if tile.text == "" || tile.textColor == UIColor.red {
-                self.tilesLabelCollection[self.toucedLabel - 1].text = "\(sender.tag)"
+                self.tilesLabelCollection[self.toucedLabel - 1].text = LanguageHandler.sharedInstance.stringForKey(key: "\(sender.tag)")//"\(sender.tag)"
                 self.tilesLabelCollection[self.toucedLabel - 1].textColor = UIColor.red
                 let loc = self.tilesLabelCollection[self.toucedLabel - 1].tag
                 fillPuzzleLocation(loc, number: sender.tag)
             } else {
-                showMessage("Error", message: "you can't change this tile", ActionTitle: "Ok", withComplitionCode: false)
+                Utilities.showMessageIn(viewController: self, withTitle: "Error", andMessage: "You can't change this tile", andActionTitle: "Ok", andComplitionCode: false)
             }
         } else {
-            showMessage("Error", message: "you didn't touch any tile", ActionTitle: "Ok", withComplitionCode: false)
+            Utilities.showMessageIn(viewController: self, withTitle: "Error", andMessage: "Please choose tile first", andActionTitle: "Ok", andComplitionCode: false)
         }
     }
     
@@ -124,22 +108,22 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
     @IBAction func checkSolutionPressed(_ sender: AnyObject) {
         if self.gameLevel != 0 {
             if boardHaveEmptyTiles(self.puzzle) {
-                showMessage("Wrong answer", message: "Still have empty places, fill them first", ActionTitle: "Ok", withComplitionCode: false)
+                Utilities.showMessageIn(viewController: self, withTitle: "Wrong answer", andMessage: "Still have empty places, fill them first", andActionTitle: "Ok", andComplitionCode: false)
                 return
             }
             
             if madeAppSolvePuzzle {
-                showMessage("Sorry", message: "Try to solve it by yourself next time", ActionTitle: "Ok", withComplitionCode: true)
+                Utilities.showMessageIn(viewController: self, withTitle: "Sorry", andMessage: "Try to solve it by yourself next time", andActionTitle: "Ok", andComplitionCode: true)
                 return
             }
             
             let worngTiles = self.game.checkSln(self.puzzle)
             
             if worngTiles.count == 0 {
-                showMessage("Yay!!!", message: "Congrats... You solved it with score: ", ActionTitle: "Ok", withComplitionCode: true)
+                Utilities.showMessageIn(viewController: self, withTitle: "Yay!!!", andMessage: "Congrats... You solved it with score: ", andActionTitle: "Ok", andComplitionCode: true)
             } else {
                 showWorngTiles(worngTiles)
-                showMessage("Wrong answer", message: "Great work, but check your answer again", ActionTitle: "Ok", withComplitionCode: false)
+                Utilities.showMessageIn(viewController: self, withTitle: "Wrong answer", andMessage: "Great work, but check your answer again", andActionTitle: "Ok", andComplitionCode: false)
             }
         } else {
             return
@@ -183,7 +167,7 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
                 self.puzzle = self.game.solve
                 fillGrid()
             } else {
-                showMessage("Check", message: "Check your tiles again because this grid has no solution", ActionTitle: "Ok", withComplitionCode: false)
+                Utilities.showMessageIn(viewController: self, withTitle: "Check", andMessage: "Check your tiles again because this grid has no solution", andActionTitle: "Ok", andComplitionCode: false)
             }
         } else {
             self.puzzle = self.game.answer
@@ -197,7 +181,7 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
         for i in 0 ..< self.puzzle.count {
             for j in 0 ..< self.puzzle[i].count {
                 if self.tilesLabelCollection[idx].text == "" {
-                    self.tilesLabelCollection[idx].text = "\(self.puzzle[i][j])"
+                    self.tilesLabelCollection[idx].text = LanguageHandler.sharedInstance.stringForKey(key: "\(self.puzzle[i][j])")//"\(self.puzzle[i][j])"
                     self.tilesLabelCollection[idx].textColor = UIColor.white
                 }
                 idx += 1

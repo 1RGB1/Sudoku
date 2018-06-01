@@ -1,0 +1,45 @@
+ /* 
+  Localizable.strings
+  SuDoKu
+
+  Created by Ahmad Ragab on 6/1/18.
+  Copyright © 2018 Ahmad Ragab. All rights reserved.
+*/
+
+"1" = "1";
+"2" = "2";
+"3" = "3";
+"4" = "4";
+"5" = "5";
+"6" = "6";
+"7" = "7";
+"8" = "8";
+"9" = "9";
+"10" = "10";
+
+"Very Easy" = "Very Easy";
+"Easy" = "Easy";
+"Medium" = "Medium";
+"Hard" = "Hard";
+"Extreme" = "Extreme";
+"Empty" = "Empty";
+
+"New" = "New";
+"Check" = "Check";
+"Solve" = "Solve";
+
+"Language" = "عربي";
+
+"Ok" = "Ok";
+"Error" = "Error";
+"Sorry" = "Sorry";
+"Yay!!!" = "Yay 💪";
+"Wrong answer" = "Wrong answer";
+
+"Check your tiles again because this grid has no solution" = "Check your tiles again because this grid has no solution";
+"You can't change this tile" = "You can't change this tile";
+"Please choose tile first" = "Please choose tile first";
+"Still have empty places, fill them first" = "Still have empty places, fill them first";
+"Try to solve it by yourself next time" = "Try to solve it by yourself next time";
+"Congrats... You solved it with score: " = "Congrats... You solved it with score: ";
+"Great work, but check your answer again" = "Great work, but check your answer again";

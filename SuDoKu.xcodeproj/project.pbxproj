@@ -8,26 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		E08B4AE31C3011C800C227C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B4AE21C3011C800C227C6 /* AppDelegate.swift */; };
-		E08B4AE51C3011C800C227C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B4AE41C3011C800C227C6 /* ViewController.swift */; };
+		E08B4AE51C3011C800C227C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B4AE41C3011C800C227C6 /* HomeViewController.swift */; };
 		E08B4AE81C3011C800C227C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08B4AE61C3011C800C227C6 /* Main.storyboard */; };
 		E08B4AEB1C3011C800C227C6 /* SuDoKu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E08B4AE91C3011C800C227C6 /* SuDoKu.xcdatamodeld */; };
-		E08B4AED1C3011C800C227C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08B4AEC1C3011C800C227C6 /* Assets.xcassets */; };
 		E08B4AF01C3011C800C227C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08B4AEE1C3011C800C227C6 /* LaunchScreen.storyboard */; };
 		E08B4AF91C30126D00C227C6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B4AF81C30126D00C227C6 /* Game.swift */; };
 		E08B4AFB1C301AB700C227C6 /* SudokuBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B4AFA1C301AB700C227C6 /* SudokuBoardViewController.swift */; };
+		E0B1155020C16B4C0087AFC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0B1155220C16B4C0087AFC4 /* Localizable.strings */; };
+		E0B1155520C1712F0087AFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B1155420C1712F0087AFC4 /* Assets.xcassets */; };
+		E0B1155720C172950087AFC4 /* LanguageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1155620C172950087AFC4 /* LanguageHandler.swift */; };
+		E0B1155920C1850B0087AFC4 /* CustomizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1155820C1850B0087AFC4 /* CustomizedButton.swift */; };
+		E0B1155B20C1851C0087AFC4 /* CustomizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1155A20C1851C0087AFC4 /* CustomizedLabel.swift */; };
+		E0FFA83820C18E4A0024434E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FFA83720C18E4A0024434E /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E08B4ADF1C3011C800C227C6 /* SuDoKu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuDoKu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08B4AE21C3011C800C227C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E08B4AE41C3011C800C227C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E08B4AE41C3011C800C227C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E08B4AE71C3011C800C227C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E08B4AEA1C3011C800C227C6 /* SuDoKu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuDoKu.xcdatamodel; sourceTree = "<group>"; };
-		E08B4AEC1C3011C800C227C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E08B4AEF1C3011C800C227C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E08B4AF11C3011C800C227C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E08B4AF81C30126D00C227C6 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		E08B4AFA1C301AB700C227C6 /* SudokuBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudokuBoardViewController.swift; sourceTree = "<group>"; };
+		E0B1154A20C16AA60087AFC4 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/Main.strings"; sourceTree = "<group>"; };
+		E0B1154B20C16AA60087AFC4 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E0B1155120C16B4C0087AFC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0B1155320C16B4E0087AFC4 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E0B1155420C1712F0087AFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0B1155620C172950087AFC4 /* LanguageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageHandler.swift; sourceTree = "<group>"; };
+		E0B1155820C1850B0087AFC4 /* CustomizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedButton.swift; sourceTree = "<group>"; };
+		E0B1155A20C1851C0087AFC4 /* CustomizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedLabel.swift; sourceTree = "<group>"; };
+		E0FFA83620C18C0F0024434E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		E0FFA83720C18E4A0024434E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E00DB48B20C1859C00C839E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E0B1155820C1850B0087AFC4 /* CustomizedButton.swift */,
+				E0B1155A20C1851C0087AFC4 /* CustomizedLabel.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		E08B4AD61C3011C800C227C6 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +83,10 @@
 		E08B4AE11C3011C800C227C6 /* SuDoKu */ = {
 			isa = PBXGroup;
 			children = (
-				E08B4AF81C30126D00C227C6 /* Game.swift */,
-				E08B4AFA1C301AB700C227C6 /* SudokuBoardViewController.swift */,
-				E08B4AE41C3011C800C227C6 /* ViewController.swift */,
-				E08B4AE61C3011C800C227C6 /* Main.storyboard */,
+				E09C5E2E20C1860500FE9EED /* Presentation */,
+				E0B1155D20C185480087AFC4 /* Model */,
+				E0B1155C20C185280087AFC4 /* Resources */,
+				E0B1155E20C185530087AFC4 /* Util */,
 				E08B4AF71C3011D300C227C6 /* Supporting Files */,
 			);
 			path = SuDoKu;
@@ -73,12 +96,48 @@
 			isa = PBXGroup;
 			children = (
 				E08B4AE21C3011C800C227C6 /* AppDelegate.swift */,
-				E08B4AEC1C3011C800C227C6 /* Assets.xcassets */,
 				E08B4AEE1C3011C800C227C6 /* LaunchScreen.storyboard */,
 				E08B4AF11C3011C800C227C6 /* Info.plist */,
 				E08B4AE91C3011C800C227C6 /* SuDoKu.xcdatamodeld */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E09C5E2E20C1860500FE9EED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E00DB48B20C1859C00C839E7 /* UI */,
+				E08B4AE61C3011C800C227C6 /* Main.storyboard */,
+				E08B4AFA1C301AB700C227C6 /* SudokuBoardViewController.swift */,
+				E08B4AE41C3011C800C227C6 /* HomeViewController.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		E0B1155C20C185280087AFC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0B1155220C16B4C0087AFC4 /* Localizable.strings */,
+				E0B1155420C1712F0087AFC4 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E0B1155D20C185480087AFC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E08B4AF81C30126D00C227C6 /* Game.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E0B1155E20C185530087AFC4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E0B1155620C172950087AFC4 /* LanguageHandler.swift */,
+				E0FFA83720C18E4A0024434E /* Utilities.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ahmad Ragab";
 				TargetAttributes = {
 					E08B4ADE1C3011C800C227C6 = {
@@ -125,6 +184,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ar-EG",
 			);
 			mainGroup = E08B4AD61C3011C800C227C6;
 			productRefGroup = E08B4AE01C3011C800C227C6 /* Products */;
@@ -142,7 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E08B4AF01C3011C800C227C6 /* LaunchScreen.storyboard in Resources */,
-				E08B4AED1C3011C800C227C6 /* Assets.xcassets in Resources */,
+				E0B1155020C16B4C0087AFC4 /* Localizable.strings in Resources */,
+				E0B1155520C1712F0087AFC4 /* Assets.xcassets in Resources */,
 				E08B4AE81C3011C800C227C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,10 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E08B4AEB1C3011C800C227C6 /* SuDoKu.xcdatamodeld in Sources */,
-				E08B4AE51C3011C800C227C6 /* ViewController.swift in Sources */,
+				E0B1155920C1850B0087AFC4 /* CustomizedButton.swift in Sources */,
+				E08B4AE51C3011C800C227C6 /* HomeViewController.swift in Sources */,
 				E08B4AE31C3011C800C227C6 /* AppDelegate.swift in Sources */,
 				E08B4AF91C30126D00C227C6 /* Game.swift in Sources */,
+				E0B1155720C172950087AFC4 /* LanguageHandler.swift in Sources */,
+				E0FFA83820C18E4A0024434E /* Utilities.swift in Sources */,
 				E08B4AFB1C301AB700C227C6 /* SudokuBoardViewController.swift in Sources */,
+				E0B1155B20C1851C0087AFC4 /* CustomizedLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +234,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				E08B4AE71C3011C800C227C6 /* Base */,
+				E0B1154A20C16AA60087AFC4 /* ar-EG */,
+				E0FFA83620C18C0F0024434E /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -177,8 +244,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				E08B4AEF1C3011C800C227C6 /* Base */,
+				E0B1154B20C16AA60087AFC4 /* ar-EG */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E0B1155220C16B4C0087AFC4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0B1155120C16B4C0087AFC4 /* en */,
+				E0B1155320C16B4E0087AFC4 /* ar-EG */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -188,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -196,12 +274,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -240,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -248,12 +329,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

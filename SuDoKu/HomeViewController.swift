@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  SuDoKu
 //
 //  Created by Ahmad Ragab on 12/27/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class HomeViewController: UIViewController
 {
     var gameLeve = 0;
     
@@ -19,6 +19,14 @@ class ViewController: UIViewController
     @IBAction func GameLevelPressed(_ sender: UIButton) {
         self.gameLeve = sender.tag;
         self.performSegue(withIdentifier: "startGameSegue", sender: self);
+    }
+    
+    @IBAction func changeLangPressed(_ sender: Any) {
+        if LanguageHandler.sharedInstance.currentLanguage == .ENGLISH {
+            LanguageHandler.sharedInstance.setDirection(.RTL, andLanguage: .ARABIC)
+        } else {
+            LanguageHandler.sharedInstance.setDirection(.LTR, andLanguage: .ENGLISH)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
