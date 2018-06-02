@@ -130,10 +130,10 @@ class SudokuBoardViewController: UIViewController, ADBannerViewDelegate
     //-----------------------
     @IBAction func checkSolutionPressed(_ sender: AnyObject) {
         if self.gameLevel != 0 {
-//            if boardHaveEmptyTiles(self.puzzle) {
-//                Utilities.showMessageIn(viewController: self, withTitle: "Wrong answer", andMessage: "Still have empty places, fill them first", andActionTitle: "Ok", andComplitionCode: false)
-//                return
-//            }
+            if boardHaveEmptyTiles(self.puzzle) {
+                Utilities.showMessageIn(viewController: self, withTitle: "Wrong answer", andMessage: "Still have empty places, fill them first", andActionTitle: "Ok", andComplitionCode: false)
+                return
+            }
             
             if madeAppSolvePuzzle {
                 Utilities.showMessageIn(viewController: self, withTitle: "Sorry", andMessage: "Try to solve it by yourself next time", andActionTitle: "Ok", andComplitionCode: true)
