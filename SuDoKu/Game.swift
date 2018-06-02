@@ -29,17 +29,16 @@ class Game {
     
     //Check user's solution with the unique right solution
     //------------------------------------------------------
-    func checkSln(_ sudoku: Array<Array<Int>>) -> Array<(i:Int, j:Int)> {
-        var worngTiles = Array<(i:Int, j:Int)>()
+    func checkSln(_ sudoku: Array<Array<Int>>, locations: Array<Location>) -> Array<Location> {
+        var wrongTiles = Array<Location>()
         
-        for i in 0 ..< sudoku.count {
-            for j in 0 ..< sudoku[i].count {
-                if sudoku[i][j] != self.answer[i][j] {
-                    worngTiles.append((i, j))
-                }
+        for location in locations {
+            if sudoku[location.x][location.y] != self.answer[location.x][location.y] {
+                wrongTiles.append(location)
             }
         }
-        return worngTiles;
+        
+        return wrongTiles;
     }
     //------------------------------------------------------------------------------------------------
     
